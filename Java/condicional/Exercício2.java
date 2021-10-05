@@ -10,13 +10,13 @@ public class Exercicio2 {
 		
 		int numero1, numero2, numero3, contador1, contador2, contador3;
 		
-		System.out.println("Digite o primeiro número: ");
+		System.out.println("Digite o primeiro nÃºmero: ");
 		numero1 = leia.nextInt();
 		
-		System.out.println("Digite o segundo número: ");
+		System.out.println("Digite o segundo nÃºmero: ");
 		numero2 = leia.nextInt();
 		
-		System.out.println("Digite o terceiro número: ");
+		System.out.println("Digite o terceiro nÃºmero: ");
 		numero3 = leia.nextInt();
 		
 		if (numero1 <= numero2 && numero2 <= numero3){
