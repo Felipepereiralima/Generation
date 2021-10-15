@@ -12,11 +12,12 @@ public class TestaLoja {
 	
 		List<Loja> produtos = new ArrayList<>();
 	
-		String pergunta = "Sim";
+		char pergunta = 'S';
+		char resposta;
 	
 		System.out.println("================Atacadão Lima================");
 	
-		while (pergunta == "Sim"){
+		while (pergunta == 'S'){
 			
 			System.out.println("Quantos produtos deseja inserir? ");
 			int quantidadeDeProdutos = leia.nextInt();
@@ -30,12 +31,17 @@ public class TestaLoja {
 
 				produtos.add(new Loja(Produtos, quantidade));		
 			}
-			System.out.println("Deseja inserir novos produtos?");
-			pergunta = leia.next();
+			System.out.println("Deseja inserir novos produtos [S/N]?");
+			pergunta = leia.next().charAt(0);	
 		}
-		//Indicar qual é o índice do produto para remover.
-		System.out.println("Deseja remover qual produto da lista [índice]?");
-		Loja Produtos = produtos.remove(leia.nextInt());
+		System.out.println("Deseja remover um produto da lista [S/N]? ");
+		resposta = leia.next().charAt(0);
+		
+		if (resposta == 'S') {
+			//Indicar qual é o índice do produto para remover.
+			System.out.println("Quer remover qual produto da lista [índice]?");
+			Loja Produtos = produtos.remove(leia.nextInt()-1);
+		}
 		
 		System.out.println("----------------------------------------------");
 		
